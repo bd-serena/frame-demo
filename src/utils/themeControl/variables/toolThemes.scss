@@ -1,0 +1,42 @@
+// 首页
+// theme01
+// theme02
+@import './toolVariables.scss';
+$themes:(
+  default:$theme-default,
+  lightred:$theme-lightred
+);
+// 背景色统一入口
+@mixin style-color($attr, $key, $params: '') {
+  // 样式属性，类型，其他属性
+  // 默认
+  #{$attr}: map-deep-get($theme-default, '#{$attr}-default', $key);
+  // 主题
+  @each $theme-name, $map in $themes {
+    .tool-theme-#{$theme-name} & {
+      @if $params==gradient {
+        #{$attr}: linear-gradient(map-deep-get($map, '#{$attr}-#{$theme-name}', $key));
+      }
+
+      @else {
+        #{$attr}: map-deep-get($map, '#{$attr}-#{$theme-name}', $key);
+      }
+    }
+  }
+
+}
+
+// 多层处理
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+// 公共默认样式
+@each $theme-name,
+$map in $themes {
+  .theme-#{$theme-name} {
+    color: map-deep-get($map, 'color-#{$theme-name}', 'main');
+  }
+}

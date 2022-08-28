@@ -1,0 +1,13 @@
+/*
+重置自定义组件或者elementui组件样式写此文件中
+*/
+@import './toolThemes.scss';
+// 表格样式重置
+.el-table thead tr,
+.el-table thead th {
+  @include style-color('background-color', 'main')
+}
+
+.el-table thead th.is-leaf {
+  @include style-color('border-color', 'main')
+}

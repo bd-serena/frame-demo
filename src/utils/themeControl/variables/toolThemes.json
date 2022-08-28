@@ -1,0 +1,18 @@
+{
+  "theme-lightred": {
+    "mainColor": "#e70012",
+    "bgColor": "#ffffff",
+    "mainFont": "#333333",
+    "subFont": "#666666",
+    "mainLine": "#cccccc",
+    "subLine": "#999999"
+  },
+  "theme-default": {
+    "mainColor": "#409eff",
+    "bgColor": "#DCDFE6",
+    "mainFont": "#333333",
+    "subFont": "#cccccc",
+    "mainLine": "#C0C4CC",
+    "subLine": "#909399"
+  }
+}

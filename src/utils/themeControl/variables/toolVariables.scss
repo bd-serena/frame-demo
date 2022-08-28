@@ -1,0 +1,40 @@
+// 各主题主色调
+$element-main-default: #409eff;
+$element-main-lightred: #f03c3c;
+// hover active
+$opc: 0.6;
+$element-main-hover-default: rgba($element-main-default, $opc);
+$element-main-hover-lightred: rgba($element-main-lightred, $opc);
+
+// 字体颜色
+$ft-color-main: #333;
+$ft-color-main-default: $ft-color-main;
+$ft-color-main-lightred: $ft-color-main;
+
+// 深色背景下的字体颜色
+$ft-color-indeep-main: #fff;
+$ft-color-main-indeep-default: $ft-color-indeep-main;
+$ft-color-main-indeep-lightred: $ft-color-indeep-main;
+
+// default
+$theme-default: (
+  background-color-default: (
+    main: $element-main-default
+  ),
+  background-default: (
+  ),
+  color-default: (
+    main: $ft-color-main-default
+    ),
+  border-color-default: (
+    main: $ft-color-main-default
+  )
+);
+
+// lightred
+$theme-lightred: (
+  background-color-lightred: (main: $element-main-lightred),
+  background-lightred: (),
+  color-lightred: (main: $ft-color-main-lightred),
+  border-color-lightred: (main: $ft-color-main-lightred)
+);
